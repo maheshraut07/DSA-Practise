@@ -1,0 +1,2 @@
+// In this question use the previous concept of topological sort 
+// if it returns valid topological sort which is only valid for directed acyclic graph then there is no cycle present otherwise cycle is present;
