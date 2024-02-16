@@ -1,15 +1,14 @@
-//first and last position in the sorted array using binary search
 #include<iostream>
 #include<vector>
 using namespace std;
 class BinarySearch{
     public:
-    int firstOccu(int arr[] , int n, int key){
+    int firstOccu(vector<int> &arr , int n, int key){
         int s=0;
         int e=n-1;
-        int mid=s+(e-s)/2;
-        int ans;
+        int ans = -1; // Initialize ans to -1 in case key is not found
         while(s<=e){
+            int mid=s+(e-s)/2; // Calculate mid inside the loop
             if(arr[mid]==key){
                 ans=mid;
                 e=mid-1;
@@ -20,16 +19,15 @@ class BinarySearch{
             else if(key<arr[mid]){
                 e=mid-1;
             }
-            mid=s+(e-s)/2;
         }
         return ans;
     }
-    int lastOccu(int arr[],int n,int key){
+    int lastOccu(vector<int> &arr ,int n,int key){
         int s=0;
         int e=n-1;
-        int mid=s+(e-s)/2;
         int ans=-1;
         while(s<=e){
+            int mid=s+(e-s)/2; // Calculate mid inside the loop
             if(arr[mid]==key){
                 ans=mid;
                 s = mid +  1;   
@@ -39,7 +37,10 @@ class BinarySearch{
             }
             else if ( key < arr[mid]){
                 e = mid - 1;
-            }
+            }}
+            return ans ;
+    }
+
        
 
         pair<int,int>firstAndLastPosition(vector<int>&arr,int n,int key)
@@ -50,19 +51,20 @@ class BinarySearch{
 
             return p;
         }
-         return ans ;
+         
         
-}
-}
+
+
 };
 
 int main(){
 
     BinarySearch b;
-    int arr[7]={1,2,3,3,3,4,5};  
-    int n=sizeof(arr);
+    vector<int> arr = {1,2,3,3,3,4,5};
+    int n=arr.size(); // Use arr.size() to get the size of the vector
     int key=3;
-    b.firstOccu( arr ,n,key);
-    b.lastOccu( arr,n,key);
+    pair<int,int> p = b.firstAndLastPosition(arr,n,key);
+
+    cout << "First and last position of the key is : " << p.first << "," << p.second;
     return 0;
 }

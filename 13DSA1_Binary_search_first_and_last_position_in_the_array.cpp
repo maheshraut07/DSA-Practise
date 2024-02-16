@@ -1,6 +1,8 @@
 /*
 Binary search 
 first and last position of an element in the array*/
+#include<bits/stdc++.h>
+using namespace std;
 
 class Solution {
 public:

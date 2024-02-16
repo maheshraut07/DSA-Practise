@@ -17,7 +17,7 @@ class Node{
             return p;
         }
         
-        if(root -> left == NULL && root -> right == NULL){         // if only single node is present;
+        if(root -> left == NULL && root -> right == NULL){       
             pair<bool,int> p = make_pair(true, root -> data);
             return p;
         }

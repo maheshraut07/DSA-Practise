@@ -21,7 +21,7 @@ int main(){
     cin >> n;
 
     // Step 1: Create a vector to store computed values (memoization)
-    vector<int> dp(n+1);
+    vector<int> dp(n+1,-1);
 
     // Initialize the vector with -1 to indicate that values are not computed yet
     for(int i = 0; i <= n; i++){

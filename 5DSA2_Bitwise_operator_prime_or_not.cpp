@@ -4,7 +4,9 @@
 using namespace std;
 
 int main(){
-    int n ;
+    int x = 0;
+    do{
+        int n ;
     cout<<"Enter any number n : ";
     cin>>n;
 
@@ -18,5 +20,9 @@ int main(){
 
     if(isPrime) cout<<"is a prime number "<<endl;
     else cout<<"Not a Prime Number"<<endl;
+     x = n;
+    }
+    while(x != -1);
+    
     return 0;
 }
