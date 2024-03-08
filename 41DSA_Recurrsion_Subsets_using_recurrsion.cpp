@@ -36,8 +36,6 @@
 
 
     vector<vector<int>> s = subsets(nums);
-    for(auto i: s){
-     cout << i << " "
-    }
+    
     return 0;
  }

@@ -16,7 +16,7 @@ int main(){
             
             for(int i = 0; i<n; i++){
                 if(pat[0]==txt[i]){   // if first character of pat matches with text string then check for all the characters inside the text whether it is matching with pat or not 
-                    string temp = txt.substr(i,m);
+                    string temp = txt.substr(i,m);// we'll form substring from 1st matched position to the length of the pattern 
                     if(temp == pat){
                         v.push_back(i+1);
                     }

@@ -11,8 +11,8 @@ int main(){
 
      cout<<*arr <<endl;   //23
      cout<<*arr+1<<endl;  //23+1 = 24
-     cout<<*(arr+1)<<endl; //122
-     cout<<*(arr)+1<<endl;       //arr[i]=*(arr+i)
+     cout<<*(arr+1)<<endl; //122  arr[i]=*(arr+i)
+     cout<<*(arr)+1<<endl;       
      cout<<arr[2]<<endl;         //arr=*arr[0]
      cout<<*(arr+2)<<endl; //41
 

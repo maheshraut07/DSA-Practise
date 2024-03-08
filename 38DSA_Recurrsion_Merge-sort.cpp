@@ -3,56 +3,57 @@ using namespace std;
 
 void merge(int *arr, int s, int e) {
     int mid = (s + e) / 2;
-    int len1 = mid - s + 1;
-    int len2 = e - mid;
+    int n = mid - s + 1;
+    int m = e - mid;
 
-    int *first = new int[len1];
-    int *second = new int[len2];
+    int *a = new int[n];
+    int *b = new int[m];
 
-    // Copy values
+    // Copy values into a array from the original array till mid element;
     int mainArrayIndex = s;
-    for (int i = 0; i < len1; i++) {
-        first[i] = arr[mainArrayIndex];
+    for (int i = 0; i < n; i++) {
+        a[i] = arr[mainArrayIndex];
         mainArrayIndex++;
     }
-
+    
+    // copy values into b array from the original array  till last element from the mid element 
     mainArrayIndex = mid + 1;
-    for (int i = 0; i < len2; i++) {
-        second[i] = arr[mainArrayIndex];
+    for (int i = 0; i < m; i++) {
+        b[i] = arr[mainArrayIndex];
         mainArrayIndex++;
     }
 
     // Merge two sorted arrays
-    int index1 = 0;
-    int index2 = 0;
+    int i = 0;
+    int j = 0;
     mainArrayIndex = s;
 
-    while (index1 < len1 && index2 < len2) {
-        if (first[index1] < second[index2]) {
-            arr[mainArrayIndex] = first[index1];
+    while (i < n && j < m) {
+        if (a[i] < b[j]) {
+            arr[mainArrayIndex] = a[i];
             mainArrayIndex++;
-            index1++;
+            i++;
         } else {
-            arr[mainArrayIndex] = second[index2];
+            arr[mainArrayIndex] = b[j];
             mainArrayIndex++;
-            index2++;
+            j++;
         }
     }
 
-    while (index1 < len1) {
-        arr[mainArrayIndex] = first[index1];
+    while (i < n) {
+        arr[mainArrayIndex] = a[i];
         mainArrayIndex++;
-        index1++;
+        i++;
     }
 
-    while (index2 < len2) {
-        arr[mainArrayIndex] = second[index2];
+    while (j < m) {
+        arr[mainArrayIndex] = b[j];
         mainArrayIndex++;
-        index2++;
+        j++;
     }
 
-    delete[] first;
-    delete[] second;
+    delete[] a;
+    delete[] b;
 }
 
 void mergesort(int *arr, int s, int e) {

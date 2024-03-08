@@ -1,6 +1,6 @@
 //check the power of two
 #include<math.h>
-#include<iostream>
+#include<bits/stdc++.h>
 using namespace std;
 
 
@@ -28,7 +28,7 @@ int main(){
     cout<<"enter the value of n: ";
     cin>>n;
 
-    cout << s.isPowerOfTwo(n);
+    s.isPowerOfTwo(n);
 
     // if(var){
     //     cout<<"the number is power of two"<<endl;

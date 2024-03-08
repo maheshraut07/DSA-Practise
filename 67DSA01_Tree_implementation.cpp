@@ -17,18 +17,18 @@ class Node{
 
 Node* buildTree(Node *root){
         int data;
-        cout << "Enter the data: ";
+        cout << "\nEnter the data: ";
         cin >> data;
         root = new Node(data);
 
         if(data == -1) return NULL;
         
-        cout << "Enter the data for inserting in left of " << data << endl;
+        cout << "\nEnter the data for inserting in left of " << data << endl;
         root -> left = buildTree(root -> left);
 
-        cout << "Enter the data for inserting in right of " << data << endl;
+        cout << "\nEnter the data for inserting in right of " << data << endl;
         root -> right = buildTree(root -> right);
-
+        cout << "\n root: " << root -> data; 
         return root;
 }
 

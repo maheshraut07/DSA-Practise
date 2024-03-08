@@ -52,8 +52,8 @@ bool checkPangram(const std::string& s) {
     }
 
     // Check if any character count is zero
-    for (const auto& pair : m) {
-        if (pair.second == 0) {
+    for (const auto& i : m) {
+        if (i.second == 0) {
             return false;
         }
     }

@@ -42,7 +42,7 @@ char nonrepeatingCharacter(string S) {
         q.push(ch);  // Push in the queue
 
         while (!q.empty() && map[q.front()] > 1) {
-            q.pop();  // Remove repeating characters
+            q.pop();  // Remove repeating characters from front of the queue 
         }
     }
 
