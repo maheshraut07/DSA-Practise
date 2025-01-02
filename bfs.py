@@ -1,7 +1,7 @@
 from collections import deque
 class Graph:
-    def __init__(self):
-        self.m = {}
+    def __init__(self):    
+        self.m = {}                                   # m is adjacency list hre 
 
     def add_edge(self, x, y, is_undirected):
         if x not in self.m:
@@ -13,7 +13,7 @@ class Graph:
             self.m[y].append(x)
 
     def print_edges(self):
-        for vertex, edges in self.m.items():
+        for vertex, edges in self.m.items():     
             print(f"{vertex} => {', '.join(map(str, edges))}")
 
     def bfs(self, start):

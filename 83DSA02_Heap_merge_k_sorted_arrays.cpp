@@ -34,7 +34,7 @@ vector<int> mergeKSortedArrays(vector<vector<int>>&kArrays, int k)
     //step 1 : saare arrays k first element insert h 
 
     for(int i = 0; i < k; i++){
-        node *temp = new node(arr[i][0], i , 0);
+        node *temp = new node(kArrays[i][0], i , 0);
         minHeap.push(temp);
     }
 
@@ -51,7 +51,7 @@ vector<int> mergeKSortedArrays(vector<vector<int>>&kArrays, int k)
         int j = temp -> j;
 
         if(j + 1 < kArrays[i].size()){
-            node * next = new node(Karrays[i][i+1] , i, j+1);
+            node * next = new node(kArrays[i][i+1] , i, j+1);
             minHeap.push(next);
         }
 

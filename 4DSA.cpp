@@ -1,9 +1,12 @@
 /*solving pattern questions;
+
   *****
   *****
   *****
   *****
-  *****              */
+  *****              
+ 
+*/
 
 
 #include<iostream>

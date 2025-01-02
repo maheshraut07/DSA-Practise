@@ -12,10 +12,10 @@ int main(){
     cout <<"~a : "<< ~a << endl;
     cout <<"a^b : "<<(a^b)<< endl;
 
-    cout<<(17>>1)<<endl;
-    cout<<(17>>2)<<endl;
-    cout<<(19<<1)<<endl;
-    cout<<(17<<2)<<endl;
+    cout<<(17>>1)<<endl; // 8
+    cout<<(17>>2)<<endl; // 4
+    cout<<(19<<1)<<endl; // 38
+    cout<<(17<<2)<<endl; // 68
 
     int i = 5; 
     cout<<(i++)<<endl; //5 , i = 6
