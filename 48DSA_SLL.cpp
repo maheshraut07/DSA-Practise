@@ -70,13 +70,6 @@ void insertpos(Node *&head, Node *&tail)
         return;
     }
 
-    // Inserting at last position
-    if (temp->next == NULL)
-    {
-        inserttail(tail);
-        temp;
-    }
-
     int count = 1;
     while (count < position - 1)
     {
