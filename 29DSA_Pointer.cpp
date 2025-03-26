@@ -24,9 +24,9 @@ int main(){
      cout<<sizeof(temp)<<endl;//40
 
      int *ptr = &temp[0];
-     cout<<sizeof(ptr)<<endl; //4
-     cout<<sizeof(*ptr)<<endl; //4
-     cout<<sizeof(&ptr)<<endl;//4
+     cout<<sizeof(ptr)<<endl; //8
+     cout<<sizeof(*ptr)<<endl; //4 will print the value inside the array 
+     cout<<sizeof(&ptr)<<endl;//8
 
 
      int a[20] = {1,2,3,5};
