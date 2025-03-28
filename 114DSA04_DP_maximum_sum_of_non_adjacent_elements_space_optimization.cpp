@@ -68,7 +68,9 @@ int findMaxSum(vector<int>&arr, int n) {
 
     int anstabu = solvetab(arr);
 
-    return anstabu ;
+    int ansSpace = solveSpaceOptimization(arr);
+
+    return ansSpace ;
 }
 
 int main(){
@@ -77,3 +79,14 @@ int main(){
 }
 
 // this the dynamic programmig  solution for this problem using tabulizatoin(also called as bottom up approach) 
+
+
+/*
+
+Important steps to convert tabulation into space optimization (using varibales with no extra space)
+
+1) instead of declaring dp array use just variables for the space optimization 
+2) try to store the base cases value in the variables 
+3) make computations in the for loop realating it with the tabulation and memoization method 
+4) update the varibles according to the conditions and the problem
+*/

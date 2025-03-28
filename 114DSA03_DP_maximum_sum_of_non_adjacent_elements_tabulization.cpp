@@ -55,3 +55,15 @@ int main(){
 }
 
 // this the dynamic programmig  solution for this problem using tabulizatoin(also called as bottom up approach) 
+
+/* 
+important steps to convert memoization into tabulation (Bottom up approach)
+
+
+1) instead of passing the dp array as a parameter in a memoization dp try to intialize it in a funtion itself 
+2) look at the best cases try to store the result of the bese cases in the dp array 
+3) instead of recurrsive relation you can use for loops for avoiding extra stack space used in recurrsive computation
+4) make all the computations in the for loop itself
+5) instead of recurrsive call functions make the use of dp array 
+
+*/
