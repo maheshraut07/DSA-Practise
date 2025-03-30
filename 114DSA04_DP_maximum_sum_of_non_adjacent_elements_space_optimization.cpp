@@ -89,4 +89,17 @@ Important steps to convert tabulation into space optimization (using varibales w
 2) try to store the base cases value in the variables 
 3) make computations in the for loop realating it with the tabulation and memoization method 
 4) update the varibles according to the conditions and the problem
+
+
+
+if dp[i] depends on dp[i-1] and dp[i-2] then we can do the space optimizatoin 
+1) replace dp[i-1] with prev1
+2) replace dp[i-2] with prev2 
+
+modify the relation eg. 
+
+     ans = prev1 + prev2 ;
+
+     prev2 = prev1; 
+     prev1 = ans ;
 */
