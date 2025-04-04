@@ -55,7 +55,7 @@ int main(){
 
 Important steps to covert the recurrsive solution into dynamic programming solution using memoization 
 
-1) initialize the dp array (1d or 2d depending on the parameters ) with the values of -1 ;
+1) initialize the dp array (1d or 2d depending on the parameters ) with the values of -1 {the size of the array will depend upon the changing parameters}
 2) check the result for the particular overlapping subproblems has been already computed or not if yes use it by using the syntax like in above case [ (dp[n-1] != -1) return dp[n-1]]
 3) instead of returning direct result store it in a dp first 
 
