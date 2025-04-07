@@ -1,8 +1,27 @@
 #include<bits/stdc++.h>
 using namespace std;
 
-int main(){
-    
+int main() {
+    int V = 5; // number of vertices
+    vector<int> adj[V];
+
+    // Adding edges
+    adj[0].push_back(1);
+    adj[1].push_back(0);
+    adj[0].push_back(4);
+    adj[4].push_back(0);
+    adj[2].push_back(3);
+    adj[3].push_back(2);
+
+    // Perform BFS
+    vector<int> result = bfsOfGraph(V, adj);
+
+    cout << "BFS Traversal of the Graph: ";
+    for (int node : result) {
+        cout << node << " ";
+    }
+    cout << endl;
+
     return 0;
 }
 
