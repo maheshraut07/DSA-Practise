@@ -1,3 +1,30 @@
+/*
+GFG - Get Minimum Squares
+
+Given a number n, find the minimum number of perfect squares (square of an integer) that sum up to n. 
+
+Examples:
+
+Input: n = 100
+Output: 1
+Explanation: 10 * 10 = 100
+Input: n = 6
+Output: 3
+Explanation = 1 * 1 + 1 * 1 + 2 * 2 = 6 
+Expected Time Complexity: O(n * sqrt(n))
+Expected Space Complexity: O(n)
+
+Constraints:
+1 <= n <= 104
+
+Company Tags
+AmazonMicrosoftWipro
+Topic Tags
+Related Articles
+If you are facing any issue on this page. Please let us k
+ */
+
+
 #include <iostream>
 #include <vector>
 #include <climits>

@@ -1,5 +1,5 @@
 /*
-
+code studio - Ninja's Trip
 
 Problem statement
 Ninja is willing to take some time off from his training and planning a year-long tour. You are given a DAYS array consisting of ‘N’ days when Ninjas will be traveling during the year. Each Day is an integer between 1 to 365 (both inclusive). Train tickets are sold in three different ways:

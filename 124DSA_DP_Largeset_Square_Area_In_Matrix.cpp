@@ -1,6 +1,7 @@
 /*
 
-Largest square formed in a matrix
+GFG Question - Largest square formed in a matrix
+
 Difficulty: MediumAccuracy: 36.98%Submissions: 115K+Points: 4Average Time: 20m
 Given a binary matrix mat, find out the maximum length of a side of a square sub-matrix with all 1s.
 
