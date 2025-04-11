@@ -29,16 +29,28 @@ Output: 1 2 4
 using namespace std;
 
 void dfs(int i, int j, int n, int m, vector<vector<int>> &grid, vector<int> &path, vector<vector<int>> &res) {
-    path.push_back(grid[i][j]);
 
+    //add the current element in the path 
+    path.push_back(grid[i][j]);
+    
+
+    // if we reach the right bottom element add it the path array to the final result array 
     if (i == n - 1 && j == m - 1) {
         res.push_back(path);
-    } else {
+    }
+    
+    // if we didn't reach the right bottom element then add it to the path by moving down and right 
+     else {
+        //move down 
         if (i + 1 < n)
             dfs(i + 1, j, n, m, grid, path, res);
+
+        //move right
         if (j + 1 < m)
             dfs(i, j + 1, n, m, grid, path, res);
     }
+
+    //after adding the path to the result pop back the current path from the path array to process the next path 
 
     path.pop_back();  // Backtrack
 }
