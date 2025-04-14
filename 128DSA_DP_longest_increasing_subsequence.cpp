@@ -120,6 +120,26 @@ int solveSpace(vector<int> &arr, int curr, int prev){
     
 }
 
+int solveOptimalWithBinarySearch(vector<int> arr){
+    int n = arr.size();
+    if(n == 0) return 0;
+
+    vector<int> ans ;
+    ans.push_back(arr[0]);
+
+    for(int i = 1; i < n ; i++){
+        if(arr[i] > ans.back())
+            ans.push_back(arr[i]);
+        else{
+            // find index of jusst bada wala element in ans 
+            int index = lower_bound(ans.begin(), ans.end(), arr[i]) - ans.begin();
+            ans[index] = arr[i];
+        }
+    }
+
+    return ans.size();
+}
+
 int lis(vector<int>& arr) {
     // code here
     // return solveRecu(arr,0, -1 );
@@ -129,7 +149,8 @@ int lis(vector<int>& arr) {
     // return solveMemo(arr, 0, -1, dp);
     
     // return solveTab(arr, 0, -1);
-    return solveSpace(arr, 0, -1);
+    // return solveSpace(arr, 0, -1);
+    return solveOptimalWithBinarySearch(arr);
 }
 
 int main() {
